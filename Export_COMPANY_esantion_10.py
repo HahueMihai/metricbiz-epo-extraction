@@ -1,17 +1,3 @@
-# MetricBiz - esantion pentru 10 solicitanti COMPANY
-# Aceasta varianta selecteaza primele 10 inregistrari din fisierul COMPANY, in ordinea person_id, si extrage toate cererile asociate lor, cu aceleasi campuri bibliografice si rezumate. Nu limiteaza rezultatul la 10 brevete. Lista selectata este afisata la pornire si salvata in selectie_10.csv.
-# 
-# Atentie: 10 inregistrari PATSTAT nu garanteaza 10 firme juridice distincte. Selectia este pentru verificarea extractiei, nu un esantion statistic reprezentativ. Include clasificarile mixte din inventarul COMPANY.
-# 
-# Incarca acest notebook in acelasi cont EPO TIP. Pastreaza folderul inventarului initial.
-# Deschide-l si ruleaza celula de cod o singura data cu Shift+Enter.
-# Rezultatele se salveaza separat in company_bibliografie_esantion_10_v1. Exportul general nu este modificat.
-# La FINALIZAT descarca ZIP-ul. Contine selectia, CSV-ul rezultatelor, JSONL si manifestul.
-# Dupa o intrerupere poti relua aceeasi celula: interogarile validate sunt reutilizate. Nu rula doua copii simultan si nu reutiliza checkpoint-urile dupa schimbarea editiei PATSTAT.
-# Campuri: titlu, rezumat si limbile lor; solicitanti si inventatori; IPC/CPC; prioritati; cererea si data; publicatii si date; publicatii ale familiei DOCDB.
-# 
-# Limite: nu este o copie identica a Espacenet. Published as este aproximat prin familia DOCDB; CPC nu include etichetele de oficiu EP/US. Rezumatele lipsa raman goale. Nu include PDF-uri, texte integrale, CUI sau dovada titularului actual. Valorile calendaristice conventionale PATSTAT necesita interpretare. Cod verificat local, nu executat de asistent in EPO. Finalizarea se confirma din manifest.
-
 """Run in EPO TIP. Focused bibliographic export with query checkpoints.
 Uses the supplied COMPANY inventory, not all RO applicants.
 """
